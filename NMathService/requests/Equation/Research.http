@@ -1,0 +1,14 @@
+@function=(x^2+1)/(x^2-1)
+@start=-10
+@final=10
+@step=1
+
+POST http://localhost:5116/api/equation/research
+Content-Type: application/json
+
+{
+    "function": "{{function}}",
+    "start": "{{start}}",
+    "final": "{{final}}",
+    "step": "{{step}}"
+}

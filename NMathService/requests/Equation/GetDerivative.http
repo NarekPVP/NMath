@@ -1,0 +1,6 @@
+POST http://localhost:5116/api/equation/get-derivative
+Content-Type: application/json
+
+{
+    "equation": "sqrt(cos(sqrt(x)))"
+}
