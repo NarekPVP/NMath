@@ -1,6 +1,6 @@
 @function=(x^2+1)/(x^2-1)
-@start=-10
-@final=10
+@start=-100
+@final=100
 @step=1
 
 POST http://localhost:5116/api/equation/research
