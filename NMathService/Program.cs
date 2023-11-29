@@ -6,13 +6,14 @@ builder.Services.AddControllers();
 
 builder.Services.AddCors(options =>
 {
-    options.AddDefaultPolicy(builder =>
+    options.AddDefaultPolicy(innerBuilder =>
     {
-        builder.WithOrigins("*")
+        innerBuilder.WithOrigins("*")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
 });
+
 
 builder.Services
     .AddScoped<IEquationService, EquationService>();
@@ -20,6 +21,8 @@ builder.Services
 var app = builder.Build();
 
 app.UseHttpsRedirection();
+
+app.UseCors();
 
 app.UseAuthorization();
 

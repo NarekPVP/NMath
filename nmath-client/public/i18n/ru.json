@@ -1,4 +1,10 @@
 {
   "research": "Исследование функции",
-  "history": "История"
+  "history": "История",
+  "function": "Функция",
+  "derivative": "Производная",
+  "secondOrderDerivative": "Производная 2-го порядка",
+  "parity": "Чётность",
+  "points": "Точки",
+  "valuesSet": "Значение"
 }

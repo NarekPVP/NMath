@@ -1,4 +1,10 @@
 {
   "research": "Հետազոտել",
-  "history": "Պատմություն"
+  "history": "Պատմություն",
+  "function": "Ֆունկցիյա",
+  "derivative": "Ածանցյալ",
+  "secondOrderDerivative": "2-րդ կարգի ածանցյալ",
+  "parity": "Զույգություն",
+  "points": "Կետեր",
+  "valuesSet": "Սահմանված արժեքներ"
 }

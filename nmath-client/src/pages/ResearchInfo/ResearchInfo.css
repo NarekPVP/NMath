@@ -21,14 +21,14 @@
 .function-menu-header {
   padding: 15px;
   display: flex;
-  justify-content: space-between;        
+  justify-content: space-between;
 }
 
 .function-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px; 
+  padding: 10px;
 }
 
 .actions-bar {
@@ -66,4 +66,87 @@
   border: none;
   padding-left: 20px;
   margin-bottom: 10px;
+}
+
+.table-centralized {
+  width: 0 auto;
+}
+
+.table-centralized th {
+  text-align: right;
+  width: auto;
+}
+
+.table-centralized td {
+  text-align: left;
+  width: auto;
+}
+
+.math-container {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.math-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.math-header,
+.math-data {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.math-header {
+  background-color: #f2f2f2;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.functions-list-container {
+  position: absolute;
+  top: 222px;
+  right: 100px;
+  bottom: 10;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.functions-list {
+  list-style-type: none;
+  padding: 18px;
+  margin: 0;
+}
+
+.functions-list li {
+  margin-bottom: 8px;
 }

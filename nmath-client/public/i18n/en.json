@@ -1,4 +1,10 @@
 {
   "research": "Research",
-  "history": "History"
+  "history": "History",
+  "function": "Function",
+  "derivative": "Derivative",
+  "secondOrderDerivative": "2nd Derivative",
+  "parity": "Parity",
+  "points": "Points",
+  "valuesSet": "Values Set"
 }

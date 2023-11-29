@@ -1,44 +1,29 @@
 import './ResearchInfo.css'
-import { useEffect, useLayoutEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useLocalStorage } from '@uidotdev/usehooks'
-import { MathComponent } from 'mathjax-react'
-import functionPlot, { FunctionPlotDatum } from 'function-plot'
+import functionPlot from 'function-plot'
 import { ResearchParams } from './researchInfo.types'
 import { roundWithDecimals } from '../../utils'
 import FunctionsMenu from './components/FunctionsMenu'
-import useAppSelector from '../../hooks/useAppSelector'
-import { useDispatch } from 'react-redux'
-import { addEquation, selectEquations } from '../../reducers/equations'
+import { FUNCTION_COLORS, MAX_FUNCTIONS_COUNT } from '../../conts'
+import useEquationStore from './researchInfo.store'
+import FunctionsList from './components/FunctionsList'
 
-const contentsBounds = document.body.getBoundingClientRect()
+let contentsBounds = document.body.getBoundingClientRect()
 let width = 800
 let height = 500
-const ratio = contentsBounds.width / width
+let ratio = contentsBounds.width / width
 width *= ratio
 height *= ratio
 
 const ResearchInfo = () => {
   const { equation } = useParams<ResearchParams>()
-  const dispatch = useDispatch()
   const [grid] = useLocalStorage<boolean>('grid')
   const [decimal] = useLocalStorage<number>('decimal')
   const [darkMode] = useLocalStorage<boolean>('theme')
-  const [acceptableValuesDistance, setAcceptableValuesDistance] =
-    useState<string>(`D(x)\in(-\infty;+\infty)`)
-  const functions = useAppSelector(selectEquations)
-
-  const unacceptableValues = [-1, 1]
-
-  useEffect(() => {
-    console.log(equation)
-    dispatch(
-      addEquation({
-        fn: equation,
-      }),
-    )
-    console.log(functions)
-  }, [dispatch, equation,])
+  const equations = useEquationStore((state) => state.equations)
+  const addEquation = useEquationStore((state) => state.addEquation)
 
   const toggleColors = (elements: HTMLElement[], color: string) => {
     elements.forEach((element) => {
@@ -87,29 +72,15 @@ const ResearchInfo = () => {
   }
 
   useEffect(() => {
-    if (unacceptableValues.length) {
-      setAcceptableValuesDistance(
-        `D(x)\in(${unacceptableValues[0]};${unacceptableValues[1]})`,
-      )
-    }
-  }, [unacceptableValues])
+    console.log('zustand equations:', equations)
 
-  useEffect(() => {
     functionPlot({
       target: '#chart',
       width: width,
       height: height,
       yAxis: { domain: [-1, 9] },
       grid,
-      data: [
-        ...functions,
-        {
-          fn: 'x',
-        },
-        {
-          fn: 'x^3',
-        },
-      ],
+      data: equations,
       annotations: [
         {
           x: 2,
@@ -118,32 +89,40 @@ const ResearchInfo = () => {
         },
       ],
       tip: {
+        xLine: true,
+        yLine: true,
         renderer: (x: number, y: number) => {
           return `x: ${roundWithDecimals(x, decimal)},
-            y: ${roundWithDecimals(y, decimal)}`
+              y: ${roundWithDecimals(y, decimal)}`
         },
       },
     })
 
     toggleOriginPathColor(darkMode)
-  }, [grid, decimal, darkMode, equation])
+  }, [grid, decimal, darkMode, equations])
 
-  const handleAddFunction = () => {}
+  const handleAddFunction = () => {
+    if (equations.length < MAX_FUNCTIONS_COUNT) {
+      addEquation({
+        fn: 'x',
+        color: FUNCTION_COLORS[equations.length],
+      })
+    }
+  }
 
   return (
     <main>
-      <FunctionsMenu onAddClick={handleAddFunction} />
-      <div className="research-container">
-        {/* <div>Some information here</div>
-        <MathComponent tex="(1, 2)\cup(2, +\infty)" />
-        <MathComponent tex={acceptableValuesDistance} />
-        <MathComponent tex={`f(x)= ${equation}`} /> */}
-        <div
-          id="chart"
-          onMouseOver={() => toggleOriginPathColor(darkMode)}
-          onClick={() => toggleOriginPathColor(darkMode)}
-        ></div>
-      </div>
+      <>
+        <FunctionsMenu onAddClick={handleAddFunction} />
+        <FunctionsList />
+        <div className="research-container">
+          <div
+            id="chart"
+            onMouseOver={() => toggleOriginPathColor(darkMode)}
+            onClick={() => toggleOriginPathColor(darkMode)}
+          ></div>
+        </div>
+      </>
     </main>
   )
 }

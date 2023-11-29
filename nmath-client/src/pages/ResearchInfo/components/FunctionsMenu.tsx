@@ -1,9 +1,10 @@
 import '../ResearchInfo.css'
 import 'primeicons/primeicons.css'
+import { useState } from 'react'
 import { useLocalStorage } from '@uidotdev/usehooks'
 import { DARK_THEME_BACKGROUND_COLOR_HEX } from '../../../conts'
 import FunctionActions from './FunctionActions'
-import { useState } from 'react'
+import useEquationStore from '../researchInfo.store'
 
 interface IFunctionsMenuProps {
   onAddClick: () => void
@@ -12,6 +13,7 @@ interface IFunctionsMenuProps {
 const FunctionsMenu = ({ onAddClick }: IFunctionsMenuProps) => {
   const [darkMode] = useLocalStorage<boolean>('theme')
   const [menuVisible, setMenuVisible] = useState<boolean>(true)
+  const functions = useEquationStore(state => state.equations) 
 
   function handleMenuPress() {
     setMenuVisible(!menuVisible)
@@ -20,14 +22,16 @@ const FunctionsMenu = ({ onAddClick }: IFunctionsMenuProps) => {
   return (
     <div
       className="function-menu-container"
-      style={
-        darkMode
+      style={{
+        maxHeight: '400px',
+        overflowY: 'auto',
+        ...(darkMode
           ? {
               backgroundColor: DARK_THEME_BACKGROUND_COLOR_HEX,
               border: '1px solid rgba(255, 255, 255, 0.13)',
             }
-          : {}
-      }
+          : {}),
+      }}
     >
       <div className="function-menu-header">
         <i className="pi pi-align-justify" onClick={handleMenuPress}></i>
@@ -35,15 +39,20 @@ const FunctionsMenu = ({ onAddClick }: IFunctionsMenuProps) => {
       </div>
       {menuVisible && (
         <>
-          <div onClick={() => console.log('x^2 has been clicked!')}>
-            <FunctionActions equation="x^2" primaryColor="#3576c6" />
-          </div>
-          <div>
-            <FunctionActions equation="x" primaryColor="#fb5607" />
-          </div>
-          <div>
-            <FunctionActions equation="x^3" primaryColor="#7cc716" />
-          </div>
+          {functions.map((fn, index) => (
+            <div
+              key={index}
+              onClick={() =>
+                console.log(`${fn.fn?.toString()} has been clicked!`)
+              }
+            >
+              <FunctionActions
+                equation={fn.fn?.toString()}
+                index={index}
+                primaryColor={fn.color ? fn.color : '#000'}
+              />
+            </div>
+          ))}
         </>
       )}
     </div>

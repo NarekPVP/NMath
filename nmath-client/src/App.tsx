@@ -11,8 +11,10 @@ import { store } from './store/store'
 import { useLocalStorage } from '@uidotdev/usehooks'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 function App() {
+  const client = new QueryClient()
   const { i18n } = useTranslation()
   const [darkMode] = useLocalStorage<boolean>('theme')
   const [_, saveLanguage] = useLocalStorage<string>('lang')
@@ -30,15 +32,17 @@ function App() {
   }, [darkMode])
 
   return (
-    <Provider store={store}>
-      <Routes>
-        <Route path="/" element={<Header />}>
-          <Route path="/" element={<Main />} />
-          <Route path="/research/:equation" element={<ResearchInfo />} />
-          <Route path="*" element={<h1>Not Found</h1>} />
-        </Route>
-      </Routes>
-    </Provider>
+    <QueryClientProvider client={client}>
+      <Provider store={store}>
+        <Routes>
+          <Route path="/" element={<Header />}>
+            <Route path="/" element={<Main />} />
+            <Route path="/research/:equation" element={<ResearchInfo />} />
+            <Route path="*" element={<h1>Not Found</h1>} />
+          </Route>
+        </Routes>
+      </Provider>
+    </QueryClientProvider>
   )
 }
 

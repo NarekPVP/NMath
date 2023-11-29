@@ -1,11 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
 import settingsSlice from '../reducers/settings'
-import equationsSlice from '../reducers/equations'
 
 export const store = configureStore({
   reducer: {
     settings: settingsSlice,
-    equations: equationsSlice
   },
 })
 

@@ -6279,11 +6279,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/narekhovhannisyan/Documents/Projects/NMathService/EquationService.csproj",
+      "projectUniqueName": "/Users/narekhovhannisyan/Documents/Projects/NMath/NMathService/EquationService.csproj",
       "projectName": "EquationService",
-      "projectPath": "/Users/narekhovhannisyan/Documents/Projects/NMathService/EquationService.csproj",
+      "projectPath": "/Users/narekhovhannisyan/Documents/Projects/NMath/NMathService/EquationService.csproj",
       "packagesPath": "/Users/narekhovhannisyan/.nuget/packages/",
-      "outputPath": "/Users/narekhovhannisyan/Documents/Projects/NMathService/obj/",
+      "outputPath": "/Users/narekhovhannisyan/Documents/Projects/NMath/NMathService/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/narekhovhannisyan/.nuget/NuGet/NuGet.Config"

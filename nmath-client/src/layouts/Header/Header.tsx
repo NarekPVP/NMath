@@ -51,7 +51,7 @@ function Header() {
   }
 
   return (
-    <div style={{ paddingTop: '100px', ...styles }}>
+    <div style={{ paddingTop: '122px', ...styles }}>
       <Navbar
         collapseOnSelect
         expand="lg"

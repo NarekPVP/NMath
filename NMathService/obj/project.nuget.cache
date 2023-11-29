@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/ZXIycG2z9riTpfVUZiuAXbXlc/ESR0xWd454xpLnDossvACWi/Enu4MrC2Nmu3rW/oDPP9JlJH/ahK5dosnvw==",
+  "dgSpecHash": "BFiWitz8FrwAOG+oSDVybECLik66BfAaIVWZQBWM+7EA2Hfss/Qo08bjbgWbKE6qY+PkFbHJtlgfgyrtpFeEhw==",
   "success": true,
-  "projectFilePath": "/Users/narekhovhannisyan/Documents/Projects/NMathService/EquationService.csproj",
+  "projectFilePath": "/Users/narekhovhannisyan/Documents/Projects/NMath/NMathService/EquationService.csproj",
   "expectedPackageFiles": [
     "/Users/narekhovhannisyan/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/narekhovhannisyan/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

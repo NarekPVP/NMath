@@ -3,18 +3,30 @@ import { MathComponent } from 'mathjax-react'
 import { ChangeEvent, useState } from 'react'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+import useEquationStore from '../ResearchInfo/researchInfo.store'
+import { FUNCTION_COLORS } from '../../conts'
 
 const Main = () => {
   const navigate = useNavigate()
   const [equation, setEquation] = useState<string>('x^2')
   const [darkMode] = useLocalStorage<boolean>('theme')
+  const { addEquation, clearEquations } = useEquationStore()
 
   const onEquationChange = (e: ChangeEvent<HTMLInputElement>) => {
     setEquation(e.target.value)
   }
 
   const handleResearchPress = () => {
-    navigate(`/research/${encodeURIComponent(equation)}`, { state: { equation } })
+    // clearEquations()
+
+    addEquation({
+      fn: equation,
+      color: FUNCTION_COLORS[0],
+    })
+
+    navigate(`/research/${encodeURIComponent(equation)}`, {
+      state: { equation },
+    })
   }
 
   const darkStyles = {
