@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EquationService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77e023726d40b8873140d98c826ba05257ba84df")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1fa77fd5e15ede25de5272b3e57a0f62f885646")]
 [assembly: System.Reflection.AssemblyProductAttribute("EquationService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EquationService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BFiWitz8FrwAOG+oSDVybECLik66BfAaIVWZQBWM+7EA2Hfss/Qo08bjbgWbKE6qY+PkFbHJtlgfgyrtpFeEhw==",
+  "dgSpecHash": "HnUjvQra0O0=",
   "success": true,
   "projectFilePath": "/Users/narekhovhannisyan/Documents/Projects/NMath/NMathService/EquationService.csproj",
   "expectedPackageFiles": [
@@ -109,7 +109,10 @@
     "/Users/narekhovhannisyan/.nuget/packages/system.threading.tasks.extensions/4.3.0/system.threading.tasks.extensions.4.3.0.nupkg.sha512",
     "/Users/narekhovhannisyan/.nuget/packages/system.threading.timer/4.3.0/system.threading.timer.4.3.0.nupkg.sha512",
     "/Users/narekhovhannisyan/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "/Users/narekhovhannisyan/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512"
+    "/Users/narekhovhannisyan/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
+    "/Users/narekhovhannisyan/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "/Users/narekhovhannisyan/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
+    "/Users/narekhovhannisyan/.nuget/packages/microsoft.netcore.app.host.osx-arm64/7.0.20/microsoft.netcore.app.host.osx-arm64.7.0.20.nupkg.sha512"
   ],
   "logs": [
     {

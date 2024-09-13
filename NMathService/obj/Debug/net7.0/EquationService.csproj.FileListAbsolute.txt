@@ -186,9 +186,10 @@
 /Users/narekhovhannisyan/Documents/Projects/NMath/NMathService/obj/Debug/net7.0/staticwebassets.build.json
 /Users/narekhovhannisyan/Documents/Projects/NMath/NMathService/obj/Debug/net7.0/staticwebassets.development.json
 /Users/narekhovhannisyan/Documents/Projects/NMath/NMathService/obj/Debug/net7.0/scopedcss/bundle/EquationService.styles.css
-/Users/narekhovhannisyan/Documents/Projects/NMath/NMathService/obj/Debug/net7.0/EquationService.csproj.CopyComplete
 /Users/narekhovhannisyan/Documents/Projects/NMath/NMathService/obj/Debug/net7.0/EquationService.dll
 /Users/narekhovhannisyan/Documents/Projects/NMath/NMathService/obj/Debug/net7.0/refint/EquationService.dll
 /Users/narekhovhannisyan/Documents/Projects/NMath/NMathService/obj/Debug/net7.0/EquationService.pdb
 /Users/narekhovhannisyan/Documents/Projects/NMath/NMathService/obj/Debug/net7.0/EquationService.genruntimeconfig.cache
 /Users/narekhovhannisyan/Documents/Projects/NMath/NMathService/obj/Debug/net7.0/ref/EquationService.dll
+/Users/narekhovhannisyan/Documents/Projects/NMath/NMathService/obj/Debug/net7.0/EquationService.sourcelink.json
+/Users/narekhovhannisyan/Documents/Projects/NMath/NMathService/obj/Debug/net7.0/Equation.5715C386.Up2Date
