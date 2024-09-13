@@ -1,6 +1,6 @@
-# 📊 OfflineMath - A Powerful Offline Math Research App
+# 📊 NMath - A Powerful Offline Math Research App
 
-**OfflineMath** is an open-source mathematical app that helps users explore and research mathematical functions, providing detailed results with graphs. Unlike other tools like Photomath, **OfflineMath** works **offline**, completely free of charge.
+**NMath** is an open-source mathematical app that helps users explore and research mathematical functions, providing detailed results with graphs. Unlike other tools like Photomath, **NMath** works **offline**, completely free of charge.
 
 ## 🌟 Features
 
@@ -22,21 +22,21 @@
 
 1. **Install .NET SDK 7**
 
-   - Follow the official installation guide [here](https://dotnet.microsoft.com/en-us/download/dotnet/7.0).
+- Follow the official installation guide [here](https://dotnet.microsoft.com/en-us/download/dotnet/7.0).
 
 2. **Clone the Repository**:
 
-   ```bash
-   git clone https://github.com/your-username/offlinemath.git
-   cd NMath/NMathService
-   ```
+```bash
+git clone https://github.com/NarekPVP/NMath.git
+cd NMath/NMathService
+```
 
 3. **Restore and Run:**
 
-   ```bash
-   dotnet restore
-   dotnet run
-   ```
+```bash
+dotnet restore
+dotnet run
+```
 
 The server should now be running on http://localhost:5000.
 
@@ -44,28 +44,28 @@ The server should now be running on http://localhost:5000.
 
 1. **Navigate to Web Directory:**
 
-   ```bash
-   cd ../nmath-client
-   ```
+```bash
+cd ../nmath-client
+```
 
 2. **Install Dependencies** (You can use npm, yarn, pnpm, or any package manager):
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
 3. **Run the App:**
 
-   ```bash
-   npm start
-   ```
+```bash
+npm start
+```
 
 The web app will be accessible at http://localhost:3000.
 
 ### Mobile App (Expo React Native)
 
 1. **Install Expo CLI:**
-   If you don’t have Expo CLI installed, run:
+If you don’t have Expo CLI installed, run:
 
 ```bash
 npm install -g expo-cli
