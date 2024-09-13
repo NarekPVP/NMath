@@ -1,5 +1,9 @@
 # 📊 NMath - A Powerful Offline Math Research App
 
+### 🎥 Showcase
+
+Check out a demo of NMath in my web site [here](https://narekhovhannisyan.com/projects).
+
 **NMath** is an open-source mathematical app that helps users explore and research mathematical functions, providing detailed results with graphs. Unlike other tools like Photomath, **NMath** works **offline**, completely free of charge.
 
 ## 🌟 Features
@@ -12,7 +16,7 @@
 
 ## 🛠️ Tech Stack
 
-- **Backend**: .NET 7 (C#) REST API
+- **Backend**: .NET 7 (C#) REST API (You can update to newer version if you want)
 - **Web**: React (create-react-app)
 - **Mobile**: React Native (Expo)
 
@@ -65,7 +69,7 @@ The web app will be accessible at http://localhost:3000.
 ### Mobile App (Expo React Native)
 
 1. **Install Expo CLI:**
-If you don’t have Expo CLI installed, run:
+   If you don’t have Expo CLI installed, run:
 
 ```bash
 npm install -g expo-cli
@@ -93,10 +97,10 @@ _You can now use the Expo Go app on your phone to scan the QR code and run the m
 
 ### 🚀 Usage
 
-1.	Open the web or mobile app.
-2.	Enter a mathematical function into the search field.
-3.	View the results and explore the graph generated.
-4.	The app works completely offline, so no internet connection is required.
+1. Open the web or mobile app.
+2. Enter a mathematical function into the search field.
+3. View the results and explore the graph generated.
+4. The app works completely offline, so no internet connection is required.
 
 #### 🧑‍💻 **Contributing**
 
